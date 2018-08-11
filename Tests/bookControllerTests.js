@@ -17,7 +17,7 @@ describe('Book Controller Tests:', function(){
                 send: sinon.spy()
             }
 
-            var bookController = require('../controllers/bookController')(Book);
+            var bookController = require('../Controllers/bookController')(Book);
 
             bookController.post(req,res);
 
