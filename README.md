@@ -1,11 +1,12 @@
 # Temperature ReST endpoint in NodeJS
+Yet another implementation of the temperature recorder endpoint.  This time, the endpoint is written in NodeJS and uses MongoDB.
+
+
 
 ## Purpose
-Practice with
+More Practice with
 * NodeJS
-* Express
 * Mocha
-* Supertest
 * Mongoose
 * Gulp
 
@@ -20,7 +21,7 @@ git clone the application into the current directory
 you should see:
 
 Hello<br>
-Gulp is running my app on  PORT: 8000
+Gulp is running Temperature app on PORT: 8000
 
 
 ### get
@@ -43,3 +44,6 @@ Content-Type: application/json<br>
 	"location": "bedroom",
 	"time" : "2018-08-11 18:47:00"
 }
+
+# todo
+* more tests: verbs like put, patch, delete

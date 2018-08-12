@@ -30,11 +30,11 @@ app.use('/api/temperatures', tempRouter);
 
 
 app.get('/', function(req, res){
-    res.send('welcome to my API!');
+    res.send('welcome to Temperature API!');
 });
 
 app.listen(port, function(){
-    console.log('Gulp is running my app on  PORT: ' + port);
+    console.log('Gulp is running Temperature app on PORT: ' + port);
 });
 
 module.exports = app;

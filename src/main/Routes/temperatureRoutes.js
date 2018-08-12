@@ -34,7 +34,6 @@ var routes = function(Temperature){
             req.temperature.temp = req.body.temp;
             req.temperature.location = req.body.location;
             req.temperature.time = req.body.time;
-            req.temperature.read = req.body.read;
             req.temperature.save(function(err){
                 if(err)
                     res.status(500).send(err);

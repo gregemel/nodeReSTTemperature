@@ -20,10 +20,6 @@ var temperatureController = function(Temperature){
 
         var query = {};
 
-        if(req.query.genre)
-        {
-            query.genre = req.query.genre;
-        }
         Temperature.find(query, function(err,temperatures){
             if(err)
                 res.status(500).send(err);
