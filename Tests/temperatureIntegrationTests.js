@@ -15,7 +15,6 @@ describe('Temperature Crud Test', function(){
             .expect(200)
             .end(function(err, results){
                 console.log("results: " + JSON.stringify(results.body))
-//                results.body.read.should.not.equal(true);
                 results.body.should.have.property('_id');
                 done()
             })
