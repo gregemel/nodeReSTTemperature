@@ -24,19 +24,19 @@ Gulp is running my app on  PORT: 8000
 
 
 ### get
-GET /api/temperatures/ HTTP/1.1
-Host: localhost:8000
-Content-Type: application/json
+GET /api/temperatures/ HTTP/1.1<br>
+Host: localhost:8000<br>
+Content-Type: application/json<br>
 
-GET /api/temperatures/5b6f91cbb563546bd2e09db3 HTTP/1.1
-Host: localhost:8000
-Content-Type: application/json
+GET /api/temperatures/5b6f91cbb563546bd2e09db3 HTTP/1.1<br>
+Host: localhost:8000<br>
+Content-Type: application/json<br>
 
 
 ### post
-POST /api/temperatures/ HTTP/1.1
-Host: localhost:8000
-Content-Type: application/json
+POST /api/temperatures/ HTTP/1.1<br>
+Host: localhost:8000<br>
+Content-Type: application/json<br>
 
 {
 	"temp":"72",
