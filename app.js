@@ -7,14 +7,14 @@ var db;
 console.log('Hello');
 if(process.env.ENV == 'Test'){
 
-    db = mongoose.connect('mongodb://localhost/bookAPI_test');
+    db = mongoose.connect('mongodb://localhost/tempAPI_test');
 }
 
 else{
-    db= mongoose.connect('mongodb://localhost/bookAPI');
+    db= mongoose.connect('mongodb://localhost/tempAPI');
 }
 
-var Book = require('./models/bookModel');
+var Temperature = require('./models/temperatureModel');
 
 var app = express();
 
@@ -23,10 +23,10 @@ var port = process.env.PORT || 3000;
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());
 
-bookRouter = require('./Routes/bookRoutes')(Book);
+tempRouter = require('./Routes/temperatureRoutes')(Temperature);
 
 
-app.use('/api/books', bookRouter); 
+app.use('/api/temperatures', tempRouter);
 
 
 app.get('/', function(req, res){

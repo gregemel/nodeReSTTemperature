@@ -1,16 +1,17 @@
-var bookController = function(Book){
+var temperatureController = function(Temperature){
 
     var post = function(req, res){
-        var book = new Book(req.body);
+        console.log("posted req: " + JSON.stringify(req.body));
+        var temp = new Temperature(req.body);
 
-        if(!req.body.title){
+        if(!temp.location){
             res.status(400);
-            res.send('Title is required');
+            res.send('Location is required');
         }
         else {
-            book.save();
+            temp.save();
             res.status(201);
-            res.send(book);
+            res.send(temp);
         }
 
     }
@@ -23,11 +24,11 @@ var bookController = function(Book){
         {
             query.genre = req.query.genre;
         }
-        Book.find(query, function(err,books){
+        Temperature.find(query, function(err,temperatures){
             if(err)
                 res.status(500).send(err);
             else
-                res.json(books);
+                res.json(temperatures);
         });
     }
 
@@ -37,4 +38,4 @@ var bookController = function(Book){
     }
 }
 
-module.exports = bookController;
+module.exports = temperatureController;
