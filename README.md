@@ -47,3 +47,5 @@ Content-Type: application/json<br>
 
 # todo
 * more tests: verbs like put, patch, delete
+* AWS Lambda, DynamoDB
+* Security

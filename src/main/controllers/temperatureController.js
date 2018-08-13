@@ -1,3 +1,5 @@
+"use strict";
+
 var temperatureController = function(Temperature){
 
     var post = function(req, res){
@@ -13,14 +15,12 @@ var temperatureController = function(Temperature){
             res.status(201);
             res.send(temp);
         }
-
     }
 
     var get = function(req,res){
-
         var query = {};
-
         Temperature.find(query, function(err,temperatures){
+            console.log("getting: " + JSON.stringify(temperatures))
             if(err)
                 res.status(500).send(err);
             else

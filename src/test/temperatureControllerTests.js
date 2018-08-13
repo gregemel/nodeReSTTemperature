@@ -1,3 +1,5 @@
+"use strict";
+
 var should = require('should'),
     sinon = require('sinon');
 
@@ -17,7 +19,7 @@ describe('Temperature Controller Tests:', function(){
                 send: sinon.spy()
             }
 
-            var temperatureController = require('../main/Controllers/temperatureController')(Temperature);
+            var temperatureController = require('../main/controllers/temperatureController')(Temperature);
 
             temperatureController.post(req,res);
 
